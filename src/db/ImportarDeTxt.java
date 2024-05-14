@@ -1,0 +1,48 @@
+package src.db;
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+
+public class ImportarDeTxt {
+
+    public void executar(Connection connection) {
+        System.out.println("Importando dados de TXT...");
+
+        String txtFile = "importar/importar.txt";
+        String line;
+        String txtSplitBy = ";";
+
+        try (BufferedReader br = new BufferedReader(new FileReader(txtFile))) {
+            String header = br.readLine(); // Lendo a primeira linha para ignorá-la, se for um cabeçalho
+            String query = "INSERT INTO filmes (Titulo, Genero, Categoria, Midia, TipoMidia, Classificacao, Participante) VALUES (?, ?, ?, ?, ?, ?, ?)";
+            try (PreparedStatement statement = connection.prepareStatement(query)) {
+                while ((line = br.readLine()) != null) {
+                    String[] data = line.split(txtSplitBy);
+
+                    if(data.length != 7) {
+                        System.out.println("Erro: Formato inválido!");
+                        return;
+                    }
+                    // Substitua os '?' pelos dados do TXT
+                    statement.setString(1, data[0]);
+                    statement.setString(2, data[1]);
+                    statement.setString(3, data[2]);
+                    statement.setString(4, data[3]);
+                    statement.setString(5, data[4]);
+                    statement.setString(6, data[5]);
+                    statement.setString(7, data[6]);
+
+                    // Execute a inserção
+                    statement.executeUpdate();
+                }
+                System.out.println("Importação concluída com sucesso!");
+            }
+        } catch (IOException | SQLException e) {
+            e.printStackTrace();
+        }
+    }
+}

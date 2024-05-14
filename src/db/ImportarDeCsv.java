@@ -7,10 +7,10 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
-public class Importar {
+public class ImportarDeCsv {
 
     public void executar(Connection connection) {
-        System.out.println("Importando dados...");
+        System.out.println("Importando dados de csv...");
 
         String csvFile = "importar/importar.csv";
         String line;

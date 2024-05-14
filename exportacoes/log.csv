@@ -1,0 +1,32 @@
+id,genero,categoria,midia,tipo_midia,classificacao,participante
+1,Ação,Filme,Matrix,DVD,14 anos,Keanu Reeves
+2,Comédia,Vídeo,Charlie Bit My Finger,Online,Livre,Charlie e Harry Davies-Carr
+3,Pop,Música,Shape of You,MP3,Livre,Ed Sheeran
+4,Aventura,Filme,Indiana Jones,Blu-ray,12 anos,Harrison Ford
+5,Drama,Filme,Titanic,DVD,12 anos,Leonardo DiCaprio
+6,Animação,Filme,Toy Story,Blu-ray,Livre,Tom Hanks
+7,Suspense,Filme,O Sexto Sentido,DVD,14 anos,Bruce Willis
+8,Documentário,Vídeo,Planet Earth,Streaming,Livre,David Attenborough
+9,Rock,Música,Bohemian Rhapsody,MP3,Livre,Queen
+10,Comédia Romântica,Filme,Simplesmente Amor,DVD,12 anos,Hugh Grant
+11,Eletrônica,Música,Strobe,MP3,Livre,deadmau5
+12,Ficção Científica,Filme,Blade Runner,Blu-ray,14 anos,Harrison Ford
+13,Pop,Música,Uptown Funk,MP3,Livre,Mark Ronson ft. Bruno Mars
+14,Terror,Filme,O Iluminado,DVD,16 anos,Jack Nicholson
+15,Hip Hop,Música,Lose Yourself,MP3,Livre,Eminem
+16,Fantasia,Filme,O Senhor dos Anéis: A Sociedade do Anel,Blu-ray,12 anos,Elijah Wood
+17,Jazz,Música,Take Five,MP3,Livre,Dave Brubeck Quartet
+18,Romance,Filme,Orgulho e Preconceito,DVD,Livre,Keira Knightley
+19,Clássica,Música,Ave Maria,MP3,Livre,Andrea Bocelli
+20,Ação,Filme,Mad Max: Estrada da Fúria,Blu-ray,16 anos,Tom Hardy
+21,Reggae,Música,No Woman, No Cry,MP3,Livre,Bob Marley
+22,Animação,Filme,Procurando Nemo,DVD,Livre,Albert Brooks
+23,Country,Música,Ring of Fire,MP3,Livre,Johnny Cash
+24,Drama,Filme,Clube da Luta,Blu-ray,18 anos,Brad Pitt
+25,Pop,Música,Happy,MP3,Livre,Pharrell Williams
+26,Suspense,Filme,Psicose,DVD,16 anos,Anthony Perkins
+27,Eletrônica,Música,Levels,MP3,Livre,Avicii
+28,Ficção Científica,Filme,Interestelar,Blu-ray,12 anos,Matthew McConaughey
+29,Pop,Música,Billie Jean,MP3,Livre,Michael Jackson
+30,Terror,Filme,O Exorcista,DVD,18 anos,Linda Blair
+31,Hip Hop,Música,Sicko Mode,MP3,Livre,Travis Scott

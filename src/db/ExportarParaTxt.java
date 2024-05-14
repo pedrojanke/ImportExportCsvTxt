@@ -8,12 +8,12 @@ import java.sql.SQLException;
 import java.sql.Connection;
 import java.sql.ResultSetMetaData;
 
-public class Exportar {
+public class ExportarParaTxt {
 
     String filePath = "exportacoes/log.txt";
 
     public void executar(Connection connection) {
-        System.out.println("Exportando dados...");
+        System.out.println("Exportando dados para txt...");
 
         try (PrintWriter writer = new PrintWriter(new FileWriter(filePath));
                 java.sql.Statement statement = connection.createStatement();

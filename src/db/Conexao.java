@@ -24,17 +24,25 @@ public class Conexao {
                     System.out.println("Conexão estabelecida com sucesso!");
 
                     Scanner scanner = new Scanner(System.in);
-                    Importar importar = new Importar();
-                    Exportar exportar = new Exportar();
+                    ImportarDeCsv importarDeCsv = new ImportarDeCsv();
+                    ImportarDeTxt importarDeTxt = new ImportarDeTxt();
+                    ExportarParaCsv exportarParaCsv = new ExportarParaCsv();
+                    ExportarParaTxt exportarParaTxt = new ExportarParaTxt();
 
-                    System.out.println("Digite 1 para importar dados");
-                    System.out.println("Digite 2 para exportar dados");
+                    System.out.println("Digite 1 para importar dados de um arquivo CSV");
+                    System.out.println("Digite 2 para importar dados de um arquivo TXT");
+                    System.out.println("Digite 3 para exportar dados para um arquivo CSV");
+                    System.out.println("Digite 4 para exportar dados para um arquivo TXT");
                     int resposta = scanner.nextInt();
                     scanner.close();
                     if (resposta == 1) {
-                        importar.executar(connection);
+                        importarDeCsv.executar(connection);
                     } else if (resposta == 2) {
-                        exportar.executar(connection);
+                        importarDeTxt.executar(connection);
+                    } else if (resposta == 3) {
+                        exportarParaCsv.executar(connection);
+                    } else if (resposta == 4 ) {
+                        exportarParaTxt.executar(connection);
                     } else {
                         System.out.println("Opção inválida!");
                     }
