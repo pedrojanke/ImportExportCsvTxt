@@ -23,6 +23,11 @@ public class ImportarDeTxt {
                 while ((line = br.readLine()) != null) {
                     String[] data = line.split(txtSplitBy);
 
+                    String sql = "DELETE FROM integracao_dados";
+                    int linhasAfetadas = statement.executeUpdate(sql);
+
+                    System.out.println("Registros excluídos com sucesso: " + linhasAfetadas);
+
                     if(data.length != 6) {
                         System.out.println("Erro: Formato inválido!");
                         return;
