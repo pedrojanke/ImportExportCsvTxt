@@ -3,6 +3,7 @@ package src.db;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
+import java.util.Scanner;
 
 public class Conexao {
 
@@ -10,7 +11,7 @@ public class Conexao {
         String url = "jdbc:mysql://localhost:3306/alan-08-05";
         String user = "root";
         String pass = "root";
-        
+
         {
             try {
                 // Registra o driver JDBC
@@ -21,6 +22,22 @@ public class Conexao {
 
                 if (connection != null) {
                     System.out.println("Conexão estabelecida com sucesso!");
+
+                    Scanner scanner = new Scanner(System.in);
+                    Importar importar = new Importar();
+
+                    System.out.println("Digite 1 para importar dados");
+                    System.out.println("Digite 2 para exportar dados");
+                    int resposta = scanner.nextInt();
+                    scanner.close();
+                    if (resposta == 1) {
+                        importar.executar();
+
+                    } else if (resposta == 2) {
+                        System.out.println("Exportando dados...");
+                    } else {
+                        System.out.println("Opção inválida!");
+                    }
 
                     connection.close();
                 }
@@ -34,4 +51,3 @@ public class Conexao {
         }
     }
 }
-
