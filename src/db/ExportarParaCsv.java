@@ -18,7 +18,7 @@ public class ExportarParaCsv {
 
         try (PrintWriter writer = new PrintWriter(new FileWriter(filePath));
                 java.sql.Statement statement = connection.createStatement();
-                ResultSet resultSet = statement.executeQuery("SELECT * FROM filmes")) {
+                ResultSet resultSet = statement.executeQuery("SELECT * FROM integracao_dados")) {
 
             ResultSetMetaData metaData = (ResultSetMetaData) resultSet.getMetaData();
             int columnCount = metaData.getColumnCount();

@@ -1,36 +1,45 @@
-FilmeID,Titulo,Genero,Categoria,Midia,TipoMidia,Classificacao,Participante
-1,Interestelar,Ficção Científica,Filme,Cinema,Digital,14+,Christopher Nolan
-2,Toy Story,Animação,Filme,Cinema,Digital,Livre,John Lasseter
-3,Pulp Fiction,Crime,Filme,Cinema,Digital,18+,Quentin Tarantino
-4,O Poderoso Chefão,Drama,Filme,Blu-ray,Física,18+,Francis Ford Coppola
-5,Titanic,Romance,Filme,DVD,Física,12+,James Cameron
-6,Jurassic Park,Aventura,Filme,Blu-ray,Física,10+,Steven Spielberg
-7,À Espera de um Milagre,Drama,Filme,DVD,Física,16+,Frank Darabont
-8,A Origem,Ficção Científica,Filme,Cinema,Digital,14+,Christopher Nolan
-9,Forrest Gump,Drama,Filme,Blu-ray,Física,12+,Robert Zemeckis
-10,Os Vingadores,Ação,Filme,Cinema,Digital,10+,Joss Whedon
-11,A Lista de Schindler,Drama,Filme,Blu-ray,Física,16+,Steven Spielberg
-12,O Lobo de Wall Street,Drama,Filme,Cinema,Digital,18+,Martin Scorsese
-13,Gravidade,Ficção Científica,Filme,Cinema,Digital,12+,Alfonso Cuarón
-14,Clube da Luta,Drama,Filme,Blu-ray,Física,18+,David Fincher
-15,Matrix,Ficção Científica,Filme,Blu-ray,Física,16+,Lana Wachowski, Lilly Wachowski
-16,Brilho Eterno de uma Mente sem Lembranças,Romance,Filme,Cinema,Digital,12+,Michel Gondry
-17,Mad Max: Estrada da Fúria,Ação,Filme,Cinema,Digital,14+,George Miller
-18,Cidade de Deus,Drama,Filme,DVD,Física,18+,Fernando Meirelles, Kátia Lund
-19,Os Incríveis,Animação,Filme,Cinema,Digital,Livre,Brad Bird
-20,Senhor dos Anéis: A Sociedade do Anel,Fantasia,Filme,Blu-ray,Física,12+,Peter Jackson
-21,Os Bons Companheiros,Crime,Filme,DVD,Física,18+,Martin Scorsese
-22,O Senhor dos Anéis: O Retorno do Rei,Fantasia,Filme,DVD,Física,12+,Peter Jackson
-23,O Senhor dos Anéis: As Duas Torres,Fantasia,Filme,DVD,Física,12+,Peter Jackson
-24,Harry Potter e a Pedra Filosofal,Fantasia,Filme,Blu-ray,Física,10+,Chris Columbus
-25,Scarface,Crime,Filme,Cinema,Digital,18+,Brian De Palma
-26,O Rei Leão,Animação,Filme,DVD,Física,Livre,Roger Allers, Rob Minkoff
-27,O Poderoso Chefão: Parte II,Drama,Filme,Cinema,Digital,18+,Francis Ford Coppola
-28,A Viagem de Chihiro,Animação,Filme,Cinema,Digital,Livre,Hayao Miyazaki
-29,Avatar,Aventura,Filme,Blu-ray,Física,12+,James Cameron
-30,O Silêncio dos Inocentes,Suspense,Filme,Cinema,Digital,18+,Jonathan Demme
-31,Vingadores: Ultimato,Ação,Filme,Cinema,Digital,12+,Anthony Russo, Joe Russo
-32,Interestelar,Ficção Científica,Filme,Cinema,Digital,14+,Christopher Nolan
-33,Piratas do Caribe: A Maldição do Pérola Negra,Aventura,Filme,DVD,Física,12+,Gore Verbinski
-34,Os Oito Odiados,Crime,Filme,Cinema,Digital,18+,Quentin Tarantino
-35,La La Land: Cantando Estações,Musical,Filme,Cinema,Digital,12+,Damien Chazelle
+id,genero,categoria,midia,tipo_midia,classificacao,participante
+1,Ação,Filme,Matrix,DVD,14 anos,Keanu Reeves
+2,Comédia,Vídeo,Charlie Bit My Finger,Online,Livre,Charlie e Harry Davies-Carr
+3,Pop,Música,Shape of You,MP3,Livre,Ed Sheeran
+4,Aventura,Filme,Indiana Jones,Blu-ray,12 anos,Harrison Ford
+5,Drama,Filme,Titanic,DVD,12 anos,Leonardo DiCaprio
+6,Animação,Filme,Toy Story,Blu-ray,Livre,Tom Hanks
+7,Suspense,Filme,O Sexto Sentido,DVD,14 anos,Bruce Willis
+8,Documentário,Vídeo,Planet Earth,Streaming,Livre,David Attenborough
+9,Rock,Música,Bohemian Rhapsody,MP3,Livre,Queen
+10,Comédia Romântica,Filme,Simplesmente Amor,DVD,12 anos,Hugh Grant
+11,Eletrônica,Música,Strobe,MP3,Livre,deadmau5
+12,Ficção Científica,Filme,Blade Runner,Blu-ray,14 anos,Harrison Ford
+13,Pop,Música,Uptown Funk,MP3,Livre,Mark Ronson ft. Bruno Mars
+14,Terror,Filme,O Iluminado,DVD,16 anos,Jack Nicholson
+15,Hip Hop,Música,Lose Yourself,MP3,Livre,Eminem
+16,Fantasia,Filme,O Senhor dos Anéis: A Sociedade do Anel,Blu-ray,12 anos,Elijah Wood
+17,Jazz,Música,Take Five,MP3,Livre,Dave Brubeck Quartet
+18,Romance,Filme,Orgulho e Preconceito,DVD,Livre,Keira Knightley
+19,Clássica,Música,Ave Maria,MP3,Livre,Andrea Bocelli
+20,Ação,Filme,Mad Max: Estrada da Fúria,Blu-ray,16 anos,Tom Hardy
+21,Reggae,Música,No Woman, No Cry,MP3,Livre,Bob Marley
+22,Animação,Filme,Procurando Nemo,DVD,Livre,Albert Brooks
+23,Country,Música,Ring of Fire,MP3,Livre,Johnny Cash
+24,Drama,Filme,Clube da Luta,Blu-ray,18 anos,Brad Pitt
+25,Pop,Música,Happy,MP3,Livre,Pharrell Williams
+26,Suspense,Filme,Psicose,DVD,16 anos,Anthony Perkins
+27,Eletrônica,Música,Levels,MP3,Livre,Avicii
+28,Ficção Científica,Filme,Interestelar,Blu-ray,12 anos,Matthew McConaughey
+29,Pop,Música,Billie Jean,MP3,Livre,Michael Jackson
+30,Terror,Filme,O Exorcista,DVD,18 anos,Linda Blair
+31,Hip Hop,Música,Sicko Mode,MP3,Livre,Travis Scott
+32,Teste1,Teste1,Teste1,Teste1,Teste1,Teste1
+33,Teste2,Teste2,Teste2,Teste2,Teste2,Teste2
+34,Teste3,Teste3,Teste3,Teste3,Teste3,Teste3
+35,Teste,Teste,Teste,Teste,Teste,Teste
+36,Teste1,Teste1,Teste1,Teste1,Teste1,Teste1
+37,Teste2,Teste2,Teste2,Teste2,Teste2,Teste2
+38,Teste2,Teste2,Teste2,Teste2,Teste2,Teste2
+39,Teste2,Teste2,Teste2,Teste2,Teste2,Teste2
+40,Teste,Teste,Teste,Teste,Teste,Teste
+41,Teste1,Teste1,Teste1,Teste1,Teste1,Teste1
+42,Teste2,Teste2,Teste2,Teste2,Teste2,Teste2
+43,Teste2,Teste2,Teste2,Teste2,Teste2,Teste2
+44,Teste2,Teste2,Teste2,Teste2,Teste2,Teste2232323

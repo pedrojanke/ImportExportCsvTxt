@@ -18,12 +18,12 @@ public class ImportarDeTxt {
 
         try (BufferedReader br = new BufferedReader(new FileReader(txtFile))) {
             String header = br.readLine(); // Lendo a primeira linha para ignorá-la, se for um cabeçalho
-            String query = "INSERT INTO filmes (Titulo, Genero, Categoria, Midia, TipoMidia, Classificacao, Participante) VALUES (?, ?, ?, ?, ?, ?, ?)";
+            String query = "INSERT INTO integracao_dados (genero, categoria, midia, tipo_midia, classificacao, participante) VALUES (?, ?, ?, ?, ?, ?)";
             try (PreparedStatement statement = connection.prepareStatement(query)) {
                 while ((line = br.readLine()) != null) {
                     String[] data = line.split(txtSplitBy);
 
-                    if(data.length != 7) {
+                    if(data.length != 6) {
                         System.out.println("Erro: Formato inválido!");
                         return;
                     }
@@ -34,7 +34,6 @@ public class ImportarDeTxt {
                     statement.setString(4, data[3]);
                     statement.setString(5, data[4]);
                     statement.setString(6, data[5]);
-                    statement.setString(7, data[6]);
 
                     // Execute a inserção
                     statement.executeUpdate();

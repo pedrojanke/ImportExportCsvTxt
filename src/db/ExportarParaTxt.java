@@ -3,10 +3,10 @@ package src.db;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.sql.ResultSet;
-import java.sql.SQLException;
 import java.sql.Connection;
+import java.sql.ResultSet;
 import java.sql.ResultSetMetaData;
+import java.sql.SQLException;
 
 public class ExportarParaTxt {
 
@@ -17,7 +17,7 @@ public class ExportarParaTxt {
 
         try (PrintWriter writer = new PrintWriter(new FileWriter(filePath));
                 java.sql.Statement statement = connection.createStatement();
-                ResultSet resultSet = statement.executeQuery("SELECT * FROM filmes")) {
+                ResultSet resultSet = statement.executeQuery("SELECT * FROM integracao_dados")) {
 
             ResultSetMetaData metaData = (ResultSetMetaData) resultSet.getMetaData();
             int columnCount = metaData.getColumnCount();
