@@ -22,7 +22,11 @@ public class Importar {
             try (PreparedStatement statement = connection.prepareStatement(query)) {
                 while ((line = br.readLine()) != null) {
                     String[] data = line.split(csvSplitBy);
-                    
+
+                    if(data.length != 7) {
+                        System.out.println("Erro: Formato inválido!");
+                        return;
+                    }
                     // Substitua os '?' pelos dados do CSV
                     statement.setString(1, data[0]);
                     statement.setString(2, data[1]);
