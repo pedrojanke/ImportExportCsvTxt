@@ -25,16 +25,16 @@ public class Conexao {
 
                     Scanner scanner = new Scanner(System.in);
                     Importar importar = new Importar();
+                    Exportar exportar = new Exportar();
 
                     System.out.println("Digite 1 para importar dados");
                     System.out.println("Digite 2 para exportar dados");
                     int resposta = scanner.nextInt();
                     scanner.close();
                     if (resposta == 1) {
-                        importar.executar();
-
+                        importar.executar(connection);
                     } else if (resposta == 2) {
-                        System.out.println("Exportando dados...");
+                        exportar.executar(connection);
                     } else {
                         System.out.println("Opção inválida!");
                     }
