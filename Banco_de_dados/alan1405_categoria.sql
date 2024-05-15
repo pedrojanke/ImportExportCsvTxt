@@ -1,6 +1,6 @@
 -- MySQL dump 10.13  Distrib 8.0.23, for Win64 (x86_64)
 --
--- Host: localhost    Database: alan-08-05
+-- Host: localhost    Database: alan1405
 -- ------------------------------------------------------
 -- Server version	8.0.23
 
@@ -16,33 +16,31 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `integracao_dados`
+-- Table structure for table `categoria`
 --
 
-DROP TABLE IF EXISTS `integracao_dados`;
+DROP TABLE IF EXISTS `categoria`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `integracao_dados` (
-  `id` int NOT NULL AUTO_INCREMENT,
-  `genero` varchar(50) NOT NULL,
-  `categoria` varchar(50) NOT NULL,
-  `midia` varchar(200) NOT NULL,
-  `tipo_midia` varchar(50) NOT NULL,
-  `classificacao` varchar(50) NOT NULL,
-  `participante` varchar(250) NOT NULL,
+CREATE TABLE `categoria` (
+  `id` varchar(64) NOT NULL,
+  `nomecategoria` varchar(50) NOT NULL,
+  `datadecadastro` datetime NOT NULL,
+  `datainativo` datetime DEFAULT NULL,
   PRIMARY KEY (`id`),
-  UNIQUE KEY `id` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=97 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+  UNIQUE KEY `id_UNIQUE` (`id`),
+  UNIQUE KEY `nomecategoria_UNIQUE` (`nomecategoria`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `integracao_dados`
+-- Dumping data for table `categoria`
 --
 
-LOCK TABLES `integracao_dados` WRITE;
-/*!40000 ALTER TABLE `integracao_dados` DISABLE KEYS */;
-INSERT INTO `integracao_dados` VALUES (96,'maio34','abcril','jun464ho','te4646ste','1162','23323');
-/*!40000 ALTER TABLE `integracao_dados` ENABLE KEYS */;
+LOCK TABLES `categoria` WRITE;
+/*!40000 ALTER TABLE `categoria` DISABLE KEYS */;
+INSERT INTO `categoria` VALUES ('3eae1467-1250-11ef-81c3-a8a159e1c854','abril','2024-05-14 00:00:00',NULL),('3eaf9268-1250-11ef-81c3-a8a159e1c854','abcril','2024-05-14 00:00:00',NULL);
+/*!40000 ALTER TABLE `categoria` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
