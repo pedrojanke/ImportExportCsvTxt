@@ -14,33 +14,33 @@ public class ImportarDeTxt {
 
         String txtFile = "importar/importar.txt";
         String line;
-        String txtSplitBy = ";";
-
         try (BufferedReader br = new BufferedReader(new FileReader(txtFile))) {
             String header = br.readLine(); // Lendo a primeira linha para ignorá-la, se for um cabeçalho
             String query = "INSERT INTO integracao_dados (genero, categoria, midia, tipo_midia, classificacao, participante) VALUES (?, ?, ?, ?, ?, ?)";
             try (PreparedStatement statement = connection.prepareStatement(query)) {
-                while ((line = br.readLine()) != null) {
-                    String[] data = line.split(txtSplitBy);
 
-                    String sql = "DELETE FROM integracao_dados";
+                String sql = "DELETE FROM integracao_dados";
                     int linhasAfetadas = statement.executeUpdate(sql);
-
                     System.out.println("Registros excluídos com sucesso: " + linhasAfetadas);
 
-                    if(data.length != 6) {
-                        System.out.println("Erro: Formato inválido!");
-                        return;
-                    }
-                    // Substitua os '?' pelos dados do TXT
-                    statement.setString(1, data[0]);
-                    statement.setString(2, data[1]);
-                    statement.setString(3, data[2]);
-                    statement.setString(4, data[3]);
-                    statement.setString(5, data[4]);
-                    statement.setString(6, data[5]);
+                while ((line = br.readLine()) != null) {
+                    // Extrair os dados conforme a estrutura fixa do arquivo TXT
+                    String genero = extractField(line, 0, 20).trim();
+                    String categoria = extractField(line, 20, 70).trim();
+                    String midia = extractField(line, 70, 120).trim();
+                    String tipoMidia = extractField(line, 120, 170).trim();
+                    String classificacao = extractField(line, 170, 173).trim();
+                    String participante = extractField(line, 173, 273).trim();
 
-                    // Execute a inserção
+                    // Define os valores nos parâmetros do PreparedStatement
+                    statement.setString(1, genero);
+                    statement.setString(2, categoria);
+                    statement.setString(3, midia);
+                    statement.setString(4, tipoMidia);
+                    statement.setString(5, classificacao);
+                    statement.setString(6, participante);
+
+                    // Executa a inserção
                     statement.executeUpdate();
                 }
                 System.out.println("Importação concluída com sucesso!");
@@ -48,5 +48,14 @@ public class ImportarDeTxt {
         } catch (IOException | SQLException e) {
             e.printStackTrace();
         }
+    }
+
+    // Método para extrair um campo de uma linha com base na posição inicial e final
+    private String extractField(String line, int startIndex, int endIndex) {
+        // Verifica se os índices estão dentro do comprimento da linha
+        if (startIndex >= line.length() || endIndex > line.length() || startIndex > endIndex) {
+            return "";
+        }
+        return line.substring(startIndex, endIndex).trim();
     }
 }
