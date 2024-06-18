@@ -1,3 +1,11 @@
 ﻿genero;categoria;midia;tipo_midia;classificacao;participacao
-maio;abril;junho;teste;132;xcxc4343
-maio34;abcril;jun464ho;te4646ste;1162;23323
+Ação;Longa-metragem;Filme;Blu-Ray;R;Ator Principal
+Comédia;Longa-metragem;Filme;DVD;PG-13;Diretor
+Drama;Curta-metragem;Filme;Streaming;PG-13;Roteirista
+Terror;Longa-metragem;Filme;Streaming;R;Produtor
+Ficção Científica;Longa-metragem;Filme;Blu-Ray;PG-13;Ator Principal
+Animação;Curta-metragem;Filme;DVD;G;Diretor de Animação
+Documentário;Longa-metragem;Filme;Streaming;PG;Narrador
+Romance;Longa-metragem;Filme;Blu-Ray;PG-13;Ator Principal
+Fantasia;Longa-metragem;Filme;Streaming;PG-13;Diretor
+Aventura;Longa-metragem;Filme;DVD;PG-13;Produtor Executivo

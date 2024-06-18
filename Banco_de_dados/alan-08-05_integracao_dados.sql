@@ -55,7 +55,7 @@ UNLOCK TABLES;
 DELIMITER ;;
 /*!50003 CREATE*/ /*!50017 DEFINER=`root`@`localhost`*/ /*!50003 TRIGGER `TransferirDadosGenero` AFTER INSERT ON `integracao_dados` FOR EACH ROW BEGIN
     -- Inserindo os dados na tabela correspondente no banco de dados de destino (BancoDestino)
-    INSERT INTO integracao.genero (id, nomegenero, datadecadastro, datainativo)
+    INSERT INTO integracao.gender (id, nomegenero, datadecadastro, datainativo)
     VALUES (uuid(), NEW.genero, CURRENT_DATE(), NULL);
 END */;;
 DELIMITER ;
@@ -74,7 +74,7 @@ DELIMITER ;
 DELIMITER ;;
 /*!50003 CREATE*/ /*!50017 DEFINER=`root`@`localhost`*/ /*!50003 TRIGGER `TransferirDadosCategoria` AFTER INSERT ON `integracao_dados` FOR EACH ROW BEGIN
     -- Inserindo os dados na tabela correspondente no banco de dados de destino (BancoDestino)
-    INSERT INTO integracao.categoria (id, nomecategoria, datadecadastro, datainativo)
+    INSERT INTO integracao.category (id, nomecategoria, datadecadastro, datainativo)
     VALUES (uuid(), NEW.categoria, CURRENT_DATE(), NULL);
 END */;;
 DELIMITER ;
@@ -93,7 +93,7 @@ DELIMITER ;
 DELIMITER ;;
 /*!50003 CREATE*/ /*!50017 DEFINER=`root`@`localhost`*/ /*!50003 TRIGGER `TransferirDadosMidia` AFTER INSERT ON `integracao_dados` FOR EACH ROW BEGIN
     -- Inserindo os dados na tabela correspondente no banco de dados de destino (BancoDestino)
-    INSERT INTO integracao.midia (id, nomemidia, datadecadastro, datainativo)
+    INSERT INTO integracao.media (id, nomemidia, datadecadastro, datainativo)
     VALUES (uuid(), NEW.midia, CURRENT_DATE(), NULL);
 END */;;
 DELIMITER ;
@@ -112,7 +112,7 @@ DELIMITER ;
 DELIMITER ;;
 /*!50003 CREATE*/ /*!50017 DEFINER=`root`@`localhost`*/ /*!50003 TRIGGER `TransferirDadosTipoMidia` AFTER INSERT ON `integracao_dados` FOR EACH ROW BEGIN
     -- Inserindo os dados na tabela correspondente no banco de dados de destino (BancoDestino)
-    INSERT INTO integracao.tipomidia (id, nometipomidia, datadecadastro, datainativo)
+    INSERT INTO integracao.mediatype (id, nometipomidia, datadecadastro, datainativo)
     VALUES (uuid(), NEW.tipo_midia, CURRENT_DATE(), NULL);
 END */;;
 DELIMITER ;
@@ -131,7 +131,7 @@ DELIMITER ;
 DELIMITER ;;
 /*!50003 CREATE*/ /*!50017 DEFINER=`root`@`localhost`*/ /*!50003 TRIGGER `TransferirDadosClassificacao` AFTER INSERT ON `integracao_dados` FOR EACH ROW BEGIN
     -- Inserindo os dados na tabela correspondente no banco de dados de destino (BancoDestino)
-    INSERT INTO integracao.classificacao (id, nomeclassificacao, datadecadastro, datainativo)
+    INSERT INTO integracao.classification (id, nomeclassificacao, datadecadastro, datainativo)
     VALUES (uuid(), NEW.classificacao, CURRENT_DATE(), NULL);
 END */;;
 DELIMITER ;
@@ -150,7 +150,7 @@ DELIMITER ;
 DELIMITER ;;
 /*!50003 CREATE*/ /*!50017 DEFINER=`root`@`localhost`*/ /*!50003 TRIGGER `TransferirDadosParticipante` AFTER INSERT ON `integracao_dados` FOR EACH ROW BEGIN
     -- Inserindo os dados na tabela correspondente no banco de dados de destino (BancoDestino)
-    INSERT INTO integracao.participante (id, nomeparticipante, datadecadastro, datainativo)
+    INSERT INTO integracao.participant (id, nomeparticipante, datadecadastro, datainativo)
     VALUES (uuid(), NEW.participante, CURRENT_DATE(), NULL);
 END */;;
 DELIMITER ;

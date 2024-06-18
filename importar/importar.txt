@@ -1,4 +1,12 @@
 ação                guerra                                            jornada lunatica                                  vídeo                                             014 Nicolas Silva
-ação                guerra                                            jornada lunatica                                  vídeo                                             014 Pedro Henrique Janke
-ação                guerra                                            jornada lunatica                                  vídeo                                             023 Joao paulo
-ação                guerra                                            jornada lunatica                                  vídeo                                             014 Nicolas Silva
+categoria           genero                                            midia                                             tipo_midia                                       classificacao                participacao
+Ação                Longa-metragem                                    Filme                                             Blu-Ray                                          R                            Ator Principal
+Comédia             Longa-metragem                                    Filme                                             DVD                                              PG-13                        Diretor
+Drama               Curta-metragem                                    Filme                                             Streaming                                        PG-13                        Roteirista
+Terror              Longa-metragem                                    Filme                                             Streaming                                        R                            Produtor
+Ficção Científica   Longa-metragem                                    Filme                                             Blu-Ray                                          PG-13                        Ator Principal
+Animação            Curta-metragem                                    Filme                                             DVD                                              G                            Diretor de Animação
+Documentário        Longa-metragem                                    Filme                                             Streaming                                        PG                           Narrador
+Romance             Longa-metragem                                    Filme                                             Blu-Ray                                          PG-13                        Ator Principal
+Fantasia            Longa-metragem                                    Filme                                             Streaming                                        PG-13                        Diretor
+Aventura            Longa-metragem                                    Filme                                             DVD                                              PG-13                        Produtor Executivo

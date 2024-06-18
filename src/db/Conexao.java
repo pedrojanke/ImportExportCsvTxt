@@ -8,7 +8,7 @@ import java.util.Scanner;
 public class Conexao {
 
     public void connectToDatabase() {
-        String url = "jdbc:mysql://localhost:3306/alan-08-05";
+        String url = "jdbc:mysql://localhost:3306/importexportcsvtxt";
         String user = "root";
         String pass = "root";
 
