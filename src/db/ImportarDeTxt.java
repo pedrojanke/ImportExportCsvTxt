@@ -25,20 +25,20 @@ public class ImportarDeTxt {
 
                 while ((line = br.readLine()) != null) {
                     // Extrair os dados conforme a estrutura fixa do arquivo TXT
-                    String genero = extractField(line, 0, 20).trim();
-                    String categoria = extractField(line, 20, 70).trim();
-                    String midia = extractField(line, 70, 120).trim();
-                    String tipoMidia = extractField(line, 120, 170).trim();
-                    String classificacao = extractField(line, 170, 173).trim();
-                    String participante = extractField(line, 173, 273).trim();
+                    String gender = extractField(line, 0, 50).trim();
+                    String category = extractField(line, 51, 100).trim();
+                    String media = extractField(line, 101, 300).trim();
+                    String mediatype = extractField(line, 301, 350).trim();
+                    String classification = extractField(line, 351, 400).trim();
+                    String participant = extractField(line, 401, 650).trim();
 
                     // Define os valores nos parâmetros do PreparedStatement
-                    statement.setString(1, genero);
-                    statement.setString(2, categoria);
-                    statement.setString(3, midia);
-                    statement.setString(4, tipoMidia);
-                    statement.setString(5, classificacao);
-                    statement.setString(6, participante);
+                    statement.setString(1, gender);
+                    statement.setString(2, category);
+                    statement.setString(3, media);
+                    statement.setString(4, mediatype);
+                    statement.setString(5, classification);
+                    statement.setString(6, participant);
 
                     // Executa a inserção
                     statement.executeUpdate();
