@@ -1,11 +1,2 @@
 ﻿genero;categoria;midia;tipo_midia;classificacao;participacao
-categoria1;ação;cinema;filme;Livre;principal
-categoria2;comédia;streaming;série;16+;coadjuvante
-categoria3;drama;DVD;documentário;Livre2;extra
-categoria4;ficção científica;Blu-ray;filme3;17+;principal2
-categoria5;romance;VHS;série2;Livre3;coadjuvante2
-categoria6;terror;online;filme4;18+;extra2
-categoria7;animação;TV;desenho animado;Livre4;principal3
-categoria8;documentário;streaming2;documentário2;Livre5;coadjuvante3
-categoria9;thriller;DVD2;filme5;19+;extra3
-categoria10;fantasia;cinema2;série3;Livre6;principal4
+categ;ohmygod2.0;cineme;movie;free;host

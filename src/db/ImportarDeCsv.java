@@ -63,6 +63,7 @@ public class ImportarDeCsv {
         }
     }
 
+
     private boolean validateFields(String gender, String category, String media, String mediatype, String classification, String participant) {
         return !gender.isEmpty() && !category.isEmpty() && !media.isEmpty() && !mediatype.isEmpty() && !classification.isEmpty() && !participant.isEmpty();
     }
