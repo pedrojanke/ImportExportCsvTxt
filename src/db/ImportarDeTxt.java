@@ -21,19 +21,20 @@ public class ImportarDeTxt {
             String header = br.readLine();
             String line;
             while ((line = br.readLine()) != null) {
-                // Extrair os dados conforme a estrutura fixa do arquivo TXT
-                String gender = extractField(line, 0, 50).trim();
-                String category = extractField(line, 51, 100).trim();
-                String media = extractField(line, 101, 300).trim();
-                String mediatype = extractField(line, 301, 350).trim();
-                String classification = extractField(line, 351, 400).trim();
-                String participant = extractField(line, 401, 650).trim();
+                if (line.length() <= 650) {
+                    String gender = line.substring(0, 50).trim();
+                    String category = line.substring(51, 100).trim();
+                    String media = line.substring(101, 300).trim();
+                    String mediatype = line.substring(301, 350).trim();
+                    String classification = line.substring(351, 400).trim();
+                    String participant = line.substring(401).trim(); // Captura do índice 401 até o
 
-                if (validateFields(gender, category, media, mediatype, classification, participant)) {
-                    records.add(new String[]{gender, category, media, mediatype, classification, participant});
-                } else {
-                    System.out.println("Erro na validação dos dados. Importação abortada.");
-                    return;
+                    if (validateFields(gender, category, media, mediatype, classification, participant)) {
+                        records.add(new String[] { gender, category, media, mediatype, classification, participant });
+                    } else {
+                        System.out.println("Erro na validação dos dados. Importação abortada.");
+                        return;
+                    }
                 }
             }
         } catch (IOException e) {
@@ -70,7 +71,9 @@ public class ImportarDeTxt {
         return line.substring(startIndex, endIndex).trim();
     }
 
-    private boolean validateFields(String gender, String category, String media, String mediatype, String classification, String participant) {
-        return !gender.isEmpty() && !category.isEmpty() && !media.isEmpty() && !mediatype.isEmpty() && !classification.isEmpty() && !participant.isEmpty();
+    private boolean validateFields(String gender, String category, String media, String mediatype,
+            String classification, String participant) {
+        return !gender.isEmpty() && !category.isEmpty() && !media.isEmpty() && !mediatype.isEmpty()
+                && !classification.isEmpty() && !participant.isEmpty();
     }
 }
